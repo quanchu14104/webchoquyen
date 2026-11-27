@@ -7,14 +7,15 @@
   <title>Quyền Anh - Sức Khoẻ &amp; Công Việc</title>
   <meta name="theme-color" content="#E7F1E6">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Quyền Anh">
   <link rel="manifest" href="/manifest.webmanifest">
   <link rel="icon" type="image/png" href="/icons/icon-192.png?v=31">
   <link rel="apple-touch-icon" href="/icons/icon-192.png?v=31">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <script>
     (function () {
@@ -49,47 +50,62 @@
         var tc = document.querySelector('meta[name="theme-color"]');
         if (tc) tc.setAttribute('content', resolved === 'dark' ? '#0A110C' : '#E7F1E6');
         var sb = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
-        if (sb) sb.setAttribute('content', resolved === 'dark' ? 'black-translucent' : 'default');
+        if (sb) sb.setAttribute('content', 'black-translucent');
       } catch (_) { }
     })();
   </script>
-  <link rel="stylesheet" href="/style.css?v=104">
-  <link rel="stylesheet" href="/liquid-glass.css?v=104">
+  <link rel="stylesheet" href="/style.css?v=120">
+  <link rel="stylesheet" href="/liquid-glass.css?v=120">
 </head>
 
 <body>
   <!-- Bộ lọc SVG khúc xạ Snell's Law & tán sắc RGB cho Chromium -->
   <svg class="lg-svg-defs" width="0" height="0" aria-hidden="true">
     <defs>
-      <filter id="lg-refract-pill" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-        <feImage id="lg-map-pill" href="" preserveAspectRatio="none" x="0%" y="0%" width="100%" height="100%" result="map" />
-        <feDisplacementMap in="SourceGraphic" in2="map" scale="28" xChannelSelector="R" yChannelSelector="G" result="dispR" />
+      <filter id="lg-refract-pill" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%"
+        color-interpolation-filters="sRGB">
+        <feImage id="lg-map-pill" href="" preserveAspectRatio="none" x="0%" y="0%" width="100%" height="100%"
+          result="map" />
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="28" xChannelSelector="R" yChannelSelector="G"
+          result="dispR" />
         <feColorMatrix in="dispR" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="chanR" />
-        <feDisplacementMap in="SourceGraphic" in2="map" scale="23" xChannelSelector="R" yChannelSelector="G" result="dispG" />
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="23" xChannelSelector="R" yChannelSelector="G"
+          result="dispG" />
         <feColorMatrix in="dispG" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="chanG" />
-        <feDisplacementMap in="SourceGraphic" in2="map" scale="18" xChannelSelector="R" yChannelSelector="G" result="dispB" />
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="18" xChannelSelector="R" yChannelSelector="G"
+          result="dispB" />
         <feColorMatrix in="dispB" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="chanB" />
         <feBlend in="chanR" in2="chanG" mode="screen" result="rg" />
         <feBlend in="rg" in2="chanB" mode="screen" />
       </filter>
-      <filter id="lg-refract-orb" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-        <feImage id="lg-map-orb" href="" preserveAspectRatio="none" x="0%" y="0%" width="100%" height="100%" result="map" />
-        <feDisplacementMap in="SourceGraphic" in2="map" scale="24" xChannelSelector="R" yChannelSelector="G" result="dispR" />
+      <filter id="lg-refract-orb" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%"
+        color-interpolation-filters="sRGB">
+        <feImage id="lg-map-orb" href="" preserveAspectRatio="none" x="0%" y="0%" width="100%" height="100%"
+          result="map" />
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="24" xChannelSelector="R" yChannelSelector="G"
+          result="dispR" />
         <feColorMatrix in="dispR" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="chanR" />
-        <feDisplacementMap in="SourceGraphic" in2="map" scale="19" xChannelSelector="R" yChannelSelector="G" result="dispG" />
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="19" xChannelSelector="R" yChannelSelector="G"
+          result="dispG" />
         <feColorMatrix in="dispG" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="chanG" />
-        <feDisplacementMap in="SourceGraphic" in2="map" scale="14" xChannelSelector="R" yChannelSelector="G" result="dispB" />
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="14" xChannelSelector="R" yChannelSelector="G"
+          result="dispB" />
         <feColorMatrix in="dispB" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="chanB" />
         <feBlend in="chanR" in2="chanG" mode="screen" result="rg" />
         <feBlend in="rg" in2="chanB" mode="screen" />
       </filter>
-      <filter id="lg-refract-card" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-        <feImage id="lg-map-card" href="" preserveAspectRatio="none" x="0%" y="0%" width="100%" height="100%" result="map" />
-        <feDisplacementMap in="SourceGraphic" in2="map" scale="22" xChannelSelector="R" yChannelSelector="G" result="dispR" />
+      <filter id="lg-refract-card" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%"
+        color-interpolation-filters="sRGB">
+        <feImage id="lg-map-card" href="" preserveAspectRatio="none" x="0%" y="0%" width="100%" height="100%"
+          result="map" />
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="22" xChannelSelector="R" yChannelSelector="G"
+          result="dispR" />
         <feColorMatrix in="dispR" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="chanR" />
-        <feDisplacementMap in="SourceGraphic" in2="map" scale="18" xChannelSelector="R" yChannelSelector="G" result="dispG" />
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="18" xChannelSelector="R" yChannelSelector="G"
+          result="dispG" />
         <feColorMatrix in="dispG" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 0 0 0  0 0 0 1 0" result="chanG" />
-        <feDisplacementMap in="SourceGraphic" in2="map" scale="14" xChannelSelector="R" yChannelSelector="G" result="dispB" />
+        <feDisplacementMap in="SourceGraphic" in2="map" scale="14" xChannelSelector="R" yChannelSelector="G"
+          result="dispB" />
         <feColorMatrix in="dispB" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 1 0 0  0 0 0 1 0" result="chanB" />
         <feBlend in="chanR" in2="chanG" mode="screen" result="rg" />
         <feBlend in="rg" in2="chanB" mode="screen" />
@@ -203,9 +219,7 @@
             </div>
 
             <!-- Vòng tròn Gauge SVG kèm biểu tượng sức khoẻ -->
-            <div class="daily-score-gauge-wrap" onclick="openScoreBreakdownModal()" style="cursor: pointer;"
-              role="button" tabindex="0" aria-label="Xem chi tiết điểm tuân thủ hôm nay"
-              onkeydown="if(event.key==='Enter'||event.key===' ') openScoreBreakdownModal()">
+            <div class="daily-score-gauge-wrap">
               <span class="score-gauge-halo" aria-hidden="true"></span>
               <svg class="daily-score-svg" viewBox="0 0 100 100" width="92" height="92">
                 <circle class="score-track" cx="50" cy="50" r="40" stroke="#E2F0D6" stroke-width="8" fill="none" />
@@ -395,15 +409,15 @@
                ===================================================================== -->
           <div class="section-container" style="margin-top: 22px; margin-bottom: 28px;">
             <div class="section-title-header">
-              <span class="motivation-heart-badge">
-                <svg class="ui-inline-svg" viewBox="0 0 24 24" width="13" height="13" fill="currentColor"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
+              <h2 class="section-heading motivation-heading-inline">
+                <svg class="ui-inline-svg motivation-heading-heart" viewBox="0 0 24 24" width="13" height="13"
+                  fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
                   <path
                     d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
                 </svg>
                 <span>Vì người tôi yêu</span>
-              </span>
+              </h2>
               <button type="button" class="btn-link-action" style="display: inline-flex; align-items: center; gap: 4px;"
                 onclick="shuffleMotivationPhoto()" title="Đổi ảnh ngẫu nhiên">
                 <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
@@ -418,7 +432,7 @@
               </button>
             </div>
 
-            <!-- Thẻ Động Lực Nổi Bật -->
+            <!-- Thẻ Động Lực Nổi Bật (Tối giản) -->
             <div class="motivation-hero-card">
               <div class="motivation-image-container" onclick="openMotivationModal()" role="button" tabindex="0"
                 aria-label="Xem ảnh động lực phóng to"
@@ -426,30 +440,21 @@
                 <img id="motivation-hero-img" src="/ali/igexport-Dae9kAVCbKL.webp"
                   alt="Động lực giảm cân của Phùng Văn Quyền" class="motivation-hero-img" loading="lazy">
                 <div class="motivation-image-overlay">
-                  <span class="motivation-badge-tag">Mục tiêu 70kg vì em</span>
+                  <span class="motivation-eyebrow">Mục tiêu 70kg</span>
                   <p id="motivation-quote-text" class="motivation-quote">"Mỗi ngày kiên trì một chút, để trở thành phiên
                     bản phong độ và khoẻ mạnh nhất bên người mình yêu."</p>
                 </div>
               </div>
-
-              <!-- Dải ảnh cuộn ngang xem nhanh (Horizontal Thumbnails Strip) -->
-              <div class="motivation-thumbs-strip" id="motivation-thumbs-strip"></div>
             </div>
           </div>
         </section>
 
         <!-- =====================================================================
-             MÀN HÌNH: HỒ SƠ & CÀI ĐẶT
+             MÀN HÌNH: HỒ SƠ & CÀI ĐẶT (TỐI GIẢN)
              ===================================================================== -->
         <section id="tab-settings" class="tab-pane" role="tabpanel" aria-label="Hồ sơ và Cài đặt">
-          <div class="screen-nav-header">
-            <button type="button" class="btn-circle-action" aria-label="Quay lại" onclick="switchTab('today')">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2">
-                <path d="M15 18l-6-6 6-6" />
-              </svg>
-            </button>
-            <h1 class="screen-nav-title">Hồ sơ & Cài đặt</h1>
-            <div style="width: 40px;"></div>
+          <div class="screen-nav-header" style="justify-content: center;">
+            <h1 class="screen-nav-title">Cài đặt</h1>
           </div>
 
           <div class="profile-card">
@@ -464,8 +469,10 @@
 
           <!-- Giao diện & Chế độ tối -->
           <div class="settings-card-block" id="settings-theme-card">
-            <h3 class="settings-block-title">Giao diện &amp; Chế độ tối</h3>
-            <p id="theme-status-desc" class="settings-block-desc">Tự động thay đổi theo cài đặt hệ thống</p>
+            <div class="settings-card-head-row">
+              <h3 class="settings-block-title">Giao diện</h3>
+              <p id="theme-status-desc" class="settings-block-desc">Tự động theo hệ thống</p>
+            </div>
             <div class="theme-mode-grid" role="group" aria-label="Chế độ giao diện">
               <button type="button" class="theme-mode-btn active" data-theme-mode="system" aria-pressed="true"
                 onclick="setThemeMode('system')">
@@ -525,232 +532,282 @@
             </div>
           </div>
 
-          <!-- Cài đặt thông báo & Nhắc nhở -->
-          <div class="settings-card-block">
-            <h3 class="settings-block-title">Thông báo trên thiết bị</h3>
-            <p class="settings-block-desc">Nhận chuông nhắc nhở uống nước, uống thuốc đúng giờ trên điện thoại</p>
-            <div class="settings-btn-row">
-              <button type="button" id="btn-enable-push" class="btn-green-pill btn-sm"
-                onclick="enablePushNotifications()">Bật thông báo</button>
-              <button type="button" class="btn-secondary-pill btn-sm" onclick="sendTestPush()">Thử chuông</button>
-            </div>
-            <div id="ios-pwa-tip" class="ios-pwa-tip-banner" onclick="openIOSGuideModal()">
-              <span style="display: inline-flex; align-items: center; gap: 6px;">
-                <svg class="ui-inline-svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
-                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                  <line x1="12" y1="18" x2="12.01" y2="18" />
+          <!-- Mục 1: Thông số cá nhân -->
+          <details class="settings-card-block settings-accordion">
+            <summary class="settings-accordion-summary">
+              <span class="settings-accordion-icon" aria-hidden="true">
+                <svg class="ui-inline-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                  stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
                 </svg>
-                <span>Dành cho iPhone: Cách bật chuông thông báo</span>
               </span>
-              <span style="font-weight: 700;">Xem hướng dẫn &rarr;</span>
+              <span class="settings-accordion-text">
+                <span class="settings-accordion-title">Thông số cá nhân</span>
+                <span class="settings-accordion-sub">Tên, chiều cao, mục tiêu cân, nước</span>
+              </span>
+              <svg class="settings-accordion-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="settings-accordion-body">
+              <form id="settings-form" onsubmit="saveSettings(event)" style="margin-top: 12px;">
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label" for="set-name">Họ và tên</label>
+                    <input type="text" id="set-name" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="set-age">Tuổi</label>
+                    <input type="number" id="set-age" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="set-height">Chiều cao (cm)</label>
+                    <input type="number" id="set-height" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="set-goal">Mục tiêu cân (kg)</label>
+                    <input type="number" step="0.1" id="set-goal" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="set-water-min">Nước tối thiểu (ml)</label>
+                    <input type="number" id="set-water-min" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="set-water-max">Nước tối đa (ml)</label>
+                    <input type="number" id="set-water-max" class="form-input" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="set-t-sleep">Giờ đi ngủ</label>
+                    <input type="time" id="set-t-sleep" class="form-input" required>
+                  </div>
+                </div>
+                <button type="submit" class="btn-green-pill" style="width: 100%; margin-top: 14px;">Lưu thông số hồ
+                  sơ</button>
+              </form>
             </div>
-          </div>
+          </details>
 
-          <!-- Lịch nhắc nhở tự do -->
-          <div class="settings-card-block">
-            <div class="section-title-header">
-              <h3 class="settings-block-title">Lịch nhắc nhở tự do</h3>
-              <button type="button" class="btn-link-action" onclick="saveReminderSchedule()">Lưu lịch</button>
+          <!-- Mục 2: Thông báo & Lịch nhắc -->
+          <details class="settings-card-block settings-accordion">
+            <summary class="settings-accordion-summary">
+              <span class="settings-accordion-icon" aria-hidden="true">
+                <svg class="ui-inline-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                  stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                  <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                </svg>
+              </span>
+              <span class="settings-accordion-text">
+                <span class="settings-accordion-title">Thông báo &amp; Lịch nhắc</span>
+                <span class="settings-accordion-sub">Chuông thiết bị &amp; mốc giờ nhắc</span>
+              </span>
+              <svg class="settings-accordion-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="settings-accordion-body">
+              <div style="padding-top: 12px;">
+                <p class="settings-block-desc" style="margin-top: 0;">Nhận chuông nhắc nhở uống nước, uống thuốc đúng giờ</p>
+                <div class="settings-btn-row">
+                  <button type="button" id="btn-enable-push" class="btn-green-pill btn-sm"
+                    onclick="enablePushNotifications()">Bật thông báo</button>
+                  <button type="button" class="btn-secondary-pill btn-sm" onclick="sendTestPush()">Thử chuông</button>
+                </div>
+                <div id="ios-pwa-tip" class="ios-pwa-tip-banner" onclick="openIOSGuideModal()">
+                  <span style="display: inline-flex; align-items: center; gap: 6px;">
+                    <svg class="ui-inline-svg" viewBox="0 0 24 24" width="15" height="15" fill="none"
+                      stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                      <line x1="12" y1="18" x2="12.01" y2="18" />
+                    </svg>
+                    <span>iPhone: Cách bật chuông</span>
+                  </span>
+                  <span style="font-weight: 700;">Xem &rarr;</span>
+                </div>
+              </div>
+
+              <div class="settings-accordion-divider">
+                <div class="section-title-header" style="margin-bottom: 6px;">
+                  <h4 class="settings-block-title" style="font-size: 13.5px;">Lịch nhắc nhở tự do</h4>
+                  <button type="button" class="btn-link-action" onclick="saveReminderSchedule()">Lưu lịch</button>
+                </div>
+                <div class="reminder-schedule-list" style="margin-top: 6px;">
+                  <div class="schedule-row">
+                    <span class="schedule-label">Đo cân sáng:</span>
+                    <div id="remind-weight-chips" class="schedule-chips"></div>
+                    <button type="button" class="btn-add-chip" onclick="addReminderTime('weight', '06:30')">+</button>
+                    <span id="badge-count-weight" class="schedule-count-sub">1 mốc</span>
+                  </div>
+                  <div class="schedule-row">
+                    <span class="schedule-label">Uống thuốc:</span>
+                    <div id="remind-med-chips" class="schedule-chips"></div>
+                    <button type="button" class="btn-add-chip" onclick="addReminderTime('med', '08:00')"
+                      title="Thêm mốc giờ uống thuốc">+</button>
+                    <span id="badge-count-med" class="schedule-count-sub font-tabular">3 lần/ngày</span>
+                  </div>
+                  <div class="schedule-row">
+                    <span class="schedule-label">Nước lọc:</span>
+                    <div id="remind-water-chips" class="schedule-chips"></div>
+                    <button type="button" class="btn-add-chip" onclick="addReminderTime('water', '10:00')">+</button>
+                    <span id="badge-count-water" class="schedule-count-sub">4 mốc</span>
+                  </div>
+                  <div class="schedule-row" style="border-bottom: none; padding-bottom: 0;">
+                    <span class="schedule-label">Giờ đi ngủ:</span>
+                    <div id="remind-sleep-chips" class="schedule-chips"></div>
+                    <button type="button" class="btn-add-chip" onclick="addReminderTime('sleep', '22:30')">+</button>
+                    <span id="badge-count-sleep" class="schedule-count-sub">1 mốc</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="reminder-schedule-list">
-              <div class="schedule-row">
-                <span class="schedule-label">Đo cân sáng:</span>
-                <div id="remind-weight-chips" class="schedule-chips"></div>
-                <button type="button" class="btn-add-chip" onclick="addReminderTime('weight', '06:30')">+</button>
-                <span id="badge-count-weight" class="schedule-count-sub">1 mốc</span>
-              </div>
-              <div class="schedule-row">
-                <span class="schedule-label">Uống thuốc:</span>
-                <div id="remind-med-chips" class="schedule-chips"></div>
-                <button type="button" class="btn-add-chip" onclick="addReminderTime('med', '08:00')"
-                  title="Thêm mốc giờ uống thuốc">+</button>
-                <span id="badge-count-med" class="schedule-count-sub font-tabular">3 lần/ngày</span>
-              </div>
-              <div class="schedule-row">
-                <span class="schedule-label">Nước lọc:</span>
-                <div id="remind-water-chips" class="schedule-chips"></div>
-                <button type="button" class="btn-add-chip" onclick="addReminderTime('water', '10:00')">+</button>
-                <span id="badge-count-water" class="schedule-count-sub">4 mốc</span>
-              </div>
-              <div class="schedule-row">
-                <span class="schedule-label">Giờ đi ngủ:</span>
-                <div id="remind-sleep-chips" class="schedule-chips"></div>
-                <button type="button" class="btn-add-chip" onclick="addReminderTime('sleep', '22:30')">+</button>
-                <span id="badge-count-sleep" class="schedule-count-sub">1 mốc</span>
-              </div>
-            </div>
-          </div>
+          </details>
 
-          <!-- Cấu hình thông số cá nhân -->
-          <div class="settings-card-block">
-            <h3 class="settings-block-title">Thông số cá nhân</h3>
-            <form id="settings-form" onsubmit="saveSettings(event)" style="margin-top: 12px;">
-              <div class="form-grid-2">
-                <div class="form-group">
-                  <label class="form-label" for="set-name">Họ và tên</label>
-                  <input type="text" id="set-name" class="form-input" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="set-age">Tuổi</label>
-                  <input type="number" id="set-age" class="form-input" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="set-height">Chiều cao (cm)</label>
-                  <input type="number" id="set-height" class="form-input" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="set-goal">Mục tiêu cân (kg)</label>
-                  <input type="number" step="0.1" id="set-goal" class="form-input" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="set-water-min">Nước tối thiểu (ml)</label>
-                  <input type="number" id="set-water-min" class="form-input" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="set-water-max">Nước tối đa (ml)</label>
-                  <input type="number" id="set-water-max" class="form-input" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="set-t-sleep">Giờ đi ngủ</label>
-                  <input type="time" id="set-t-sleep" class="form-input" required>
-                </div>
-              </div>
-              <button type="submit" class="btn-green-pill" style="width: 100%; margin-top: 14px;">Lưu thông số hồ
-                sơ</button>
-            </form>
-          </div>
-
-          <!-- Dữ liệu, Lưu trữ trên máy & Tài khoản -->
-          <div id="settings-data-card" class="settings-card-block" style="margin-bottom: 30px;" role="region"
-            aria-label="Dữ liệu và Tài khoản">
-            <div class="work-vault-top">
-              <div class="work-vault-title-wrap">
-                <svg class="ui-inline-svg work-vault-shield" viewBox="0 0 24 24" width="16" height="16" fill="none"
-                  stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
+          <!-- Mục 3: Dữ liệu & Sao lưu -->
+          <details id="settings-data-card" class="settings-card-block settings-accordion" role="region"
+            aria-label="Dữ liệu và Sao lưu">
+            <summary class="settings-accordion-summary">
+              <span class="settings-accordion-icon" aria-hidden="true">
+                <svg class="ui-inline-svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                  stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   <path d="m9 12 2 2 4-4" />
                 </svg>
-                <h3 class="settings-block-title" style="margin-bottom: 0;">Dữ liệu &amp; Tài khoản</h3>
-              </div>
+              </span>
+              <span class="settings-accordion-text">
+                <span class="settings-accordion-title">Dữ liệu &amp; Sao lưu</span>
+                <span class="settings-accordion-sub">Xuất Excel, đồng bộ &amp; khôi phục</span>
+              </span>
               <span id="work-vault-badge" class="work-vault-badge font-tabular" role="status" aria-live="polite">Đã đồng
                 bộ 0 mục</span>
-            </div>
-            <div id="work-vault-sub" class="work-vault-sub">
-              Tự động đồng bộ giữa các thiết bị &amp; lưu dự phòng an toàn trên máy này.
-            </div>
+              <svg class="settings-accordion-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none"
+                stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </summary>
+            <div class="settings-accordion-body">
+              <div id="work-vault-sub" class="work-vault-sub" style="margin-top: 12px;">
+                Tự động đồng bộ giữa các thiết bị &amp; lưu dự phòng an toàn trên máy này.
+              </div>
 
-            <div class="settings-data-group">
-              <span class="settings-data-group-label">Sổ công việc &amp; Thu chi</span>
-              <div class="settings-data-grid-2">
-                <button type="button" id="btn-settings-export-excel" class="btn-data-action btn-data-primary"
-                  onclick="exportWorkExcel()" title="Tải bảng Excel (.csv) của tháng đang xem">
-                  <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none"
-                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
-                  <span>Xuất Excel</span>
-                </button>
-                <button type="button" id="btn-settings-save-vault" class="btn-data-action btn-data-primary"
-                  onclick="exportFinanceVaultFile()"
-                  title="Lưu file dữ liệu thu chi &amp; công việc (.json) về máy cá nhân">
-                  <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none"
-                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
-                  <span>Lưu file (.json)</span>
-                </button>
-                <label class="btn-data-action" role="button" tabindex="0"
-                  title="Khôi phục dữ liệu tài chính từ file .json trên máy cá nhân"
-                  onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.querySelector('input').click();}">
-                  <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none"
-                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="17 8 12 3 7 8" />
-                    <line x1="12" y1="3" x2="12" y2="15" />
-                  </svg>
-                  <span>Nạp file từ máy</span>
-                  <input type="file" id="finance-vault-file-input" accept=".json" style="display: none;"
-                    onchange="importFinanceVaultFile(event)">
-                </label>
-                <button type="button" id="btn-work-link-disk" class="btn-data-action" onclick="linkOrSyncLocalFinance()"
-                  title="Gắn file tự động lưu trên ổ cứng máy tính hoặc đồng bộ ngay">
-                  <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none"
-                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
-                    <path d="M3 3v5h5" />
-                    <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
-                    <path d="M16 16h5v5" />
-                  </svg>
-                  <span id="work-link-disk-label">Đồng bộ ngay</span>
-                </button>
+              <div class="settings-data-group">
+                <span class="settings-data-group-label">Sổ công việc &amp; Khoản nợ</span>
+                <div class="settings-data-grid-2">
+                  <button type="button" id="btn-settings-export-excel" class="btn-data-action btn-data-primary"
+                    onclick="exportWorkExcel()" title="Tải bảng Excel (.csv) của tháng đang xem">
+                    <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Xuất Excel</span>
+                  </button>
+                  <button type="button" id="btn-settings-save-vault" class="btn-data-action btn-data-primary"
+                    onclick="exportFinanceVaultFile()"
+                    title="Lưu file dữ liệu thu chi &amp; công việc (.json) về máy cá nhân">
+                    <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Lưu file (.json)</span>
+                  </button>
+                  <label class="btn-data-action" role="button" tabindex="0"
+                    title="Khôi phục dữ liệu tài chính từ file .json trên máy cá nhân"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.querySelector('input').click();}">
+                    <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="17 8 12 3 7 8" />
+                      <line x1="12" y1="3" x2="12" y2="15" />
+                    </svg>
+                    <span>Nạp file từ máy</span>
+                    <input type="file" id="finance-vault-file-input" accept=".json" style="display: none;"
+                      onchange="importFinanceVaultFile(event)">
+                  </label>
+                  <button type="button" id="btn-work-link-disk" class="btn-data-action"
+                    onclick="linkOrSyncLocalFinance()"
+                    title="Gắn file tự động lưu trên ổ cứng máy tính hoặc đồng bộ ngay">
+                    <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                      <path d="M3 3v5h5" />
+                      <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+                      <path d="M16 16h5v5" />
+                    </svg>
+                    <span id="work-link-disk-label">Đồng bộ ngay</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="settings-data-group">
+                <span class="settings-data-group-label">Cloud &amp; Sao lưu ứng dụng</span>
+                <div class="settings-data-grid-2">
+                  <label id="btn-sync-local-cloud" class="btn-data-action btn-data-cloud settings-data-span-2"
+                    role="button" tabindex="0"
+                    title="Chọn file .json từ máy cá nhân để tải lên và đồng bộ với dữ liệu Cloud"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.querySelector('input').click();}">
+                    <svg class="ui-inline-svg" viewBox="0 0 24 24" width="15" height="15" fill="none"
+                      stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+                      <path d="M12 12v9" />
+                      <path d="m16 16-4-4-4 4" />
+                    </svg>
+                    <span>Tải file từ máy đồng bộ Cloud</span>
+                    <input type="file" id="sync-local-cloud-input" accept=".json" style="display: none;"
+                      onchange="syncLocalFileToCloud(event)">
+                  </label>
+                  <button type="button" class="btn-data-action btn-data-neutral" onclick="downloadBackup()">
+                    <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Tải sao lưu (.json)</span>
+                  </button>
+                  <label class="btn-data-action btn-data-neutral" role="button" tabindex="0"
+                    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.querySelector('input').click();}">
+                    <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                      stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                      aria-hidden="true">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="17 8 12 3 7 8" />
+                      <line x1="12" y1="3" x2="12" y2="15" />
+                    </svg>
+                    <span>Khôi phục file</span>
+                    <input type="file" id="restore-file-input" accept=".json" style="display: none;"
+                      onchange="restoreBackup(event)">
+                  </label>
+                </div>
               </div>
             </div>
+          </details>
 
-            <div class="settings-data-group">
-              <span class="settings-data-group-label">Cloud &amp; Sao lưu ứng dụng</span>
-              <div class="settings-data-grid-2">
-                <label id="btn-sync-local-cloud" class="btn-data-action btn-data-cloud settings-data-span-2"
-                  role="button" tabindex="0"
-                  title="Chọn file .json từ máy cá nhân để tải lên và đồng bộ với dữ liệu Cloud"
-                  onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.querySelector('input').click();}">
-                  <svg class="ui-inline-svg" viewBox="0 0 24 24" width="15" height="15" fill="none"
-                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
-                    <path d="M12 12v9" />
-                    <path d="m16 16-4-4-4 4" />
-                  </svg>
-                  <span>Tải file từ máy đồng bộ Cloud</span>
-                  <input type="file" id="sync-local-cloud-input" accept=".json" style="display: none;"
-                    onchange="syncLocalFileToCloud(event)">
-                </label>
-                <button type="button" class="btn-data-action btn-data-neutral" onclick="downloadBackup()">
-                  <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none"
-                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
-                  <span>Tải sao lưu (.json)</span>
-                </button>
-                <label class="btn-data-action btn-data-neutral" role="button" tabindex="0"
-                  onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.querySelector('input').click();}">
-                  <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none"
-                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                    <polyline points="17 8 12 3 7 8" />
-                    <line x1="12" y1="3" x2="12" y2="15" />
-                  </svg>
-                  <span>Khôi phục file</span>
-                  <input type="file" id="restore-file-input" accept=".json" style="display: none;"
-                    onchange="restoreBackup(event)">
-                </label>
-              </div>
-            </div>
-
-            <div class="settings-logout-footer">
-              <button type="button" id="btn-settings-logout" class="btn-settings-logout" onclick="logout()">
-                <svg class="ui-inline-svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
-                  stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-                  <polyline points="16 17 21 12 16 7" />
-                  <line x1="21" y1="12" x2="9" y2="12" />
-                </svg>
-                <span>Đăng xuất</span>
-              </button>
-            </div>
+          <div class="settings-logout-standalone">
+            <button type="button" id="btn-settings-logout" class="btn-settings-logout" onclick="logout()">
+              <svg class="ui-inline-svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
+                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                <polyline points="16 17 21 12 16 7" />
+                <line x1="21" y1="12" x2="9" y2="12" />
+              </svg>
+              <span>Đăng xuất</span>
+            </button>
           </div>
         </section>
 
@@ -771,77 +828,134 @@
             <div style="width: 40px;" aria-hidden="true"></div>
           </div>
 
-          <!-- Bảng Lịch Tháng (Mặc định thu nhỏ chỉ hiện thanh tháng, bấm nút ở dưới để mở rộng) -->
-          <div id="work-calendar-card" class="work-calendar-card is-collapsed" role="region"
-            aria-label="Lịch công việc và các ngày có đơn trong tháng">
-            <div class="work-cal-header">
-              <div class="work-cal-nav-group">
-                <button type="button" class="btn-work-cal-nav" onclick="stepWorkCalendarMonth(-1)"
-                  aria-label="Tháng trước">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M15 18l-6-6 6-6" />
-                  </svg>
-                </button>
-                <h2 id="work-cal-month-title" class="work-cal-month-title font-tabular">Tháng --/----</h2>
-                <button type="button" class="btn-work-cal-nav" onclick="stepWorkCalendarMonth(1)"
-                  aria-label="Tháng sau">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M9 18l6-6-6-6" />
-                  </svg>
-                </button>
-              </div>
-              <button type="button" id="btn-work-today" class="btn-work-today-chip" onclick="jumpWorkToday()">Hôm
-                nay</button>
-            </div>
-
-            <div id="work-cal-body" class="work-cal-body" hidden>
-              <div class="work-cal-weekdays" aria-hidden="true">
-                <span>T2</span>
-                <span>T3</span>
-                <span>T4</span>
-                <span>T5</span>
-                <span>T6</span>
-                <span>T7</span>
-                <span>CN</span>
-              </div>
-
-              <div id="work-cal-grid" class="work-cal-grid font-tabular" onkeydown="onWorkCalGridKeydown(event)"></div>
-
-              <div class="work-cal-footer">
-                <div class="work-cal-legend" aria-hidden="true">
-                  <span class="work-cal-legend-item">
-                    <span class="work-cal-swatch is-order"></span>
-                    <span>Có đơn</span>
-                  </span>
-                  <span class="work-cal-legend-item">
-                    <span class="work-cal-swatch is-today"></span>
-                    <span>Hôm nay</span>
-                  </span>
+          <!-- Hàng công cụ trên cùng: Nút Mở lịch + Copy QR Banking -->
+          <div class="work-top-controls-row">
+            <!-- Bảng Lịch Tháng (Mặc định thu nhỏ chỉ hiện thanh nút, bấm để mở rộng toàn chiều ngang) -->
+            <div id="work-calendar-card" class="work-calendar-card is-collapsed" role="region"
+              aria-label="Lịch công việc và các ngày có đơn trong tháng">
+              <div class="work-cal-header">
+                <div class="work-cal-nav-group">
+                  <button type="button" class="btn-work-cal-nav" onclick="stepWorkCalendarMonth(-1)"
+                    aria-label="Tháng trước">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                  </button>
+                  <h2 id="work-cal-month-title" class="work-cal-month-title font-tabular">Tháng --/----</h2>
+                  <button type="button" class="btn-work-cal-nav" onclick="stepWorkCalendarMonth(1)"
+                    aria-label="Tháng sau">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </button>
                 </div>
-                <span id="work-cal-month-stats" class="work-cal-month-stats font-tabular">0 ngày có đơn</span>
+                <button type="button" id="btn-work-today" class="btn-work-today-chip" onclick="jumpWorkToday()">Hôm
+                  nay</button>
               </div>
+
+              <div id="work-cal-body" class="work-cal-body" hidden>
+                <div class="work-cal-weekdays" aria-hidden="true">
+                  <span>T2</span>
+                  <span>T3</span>
+                  <span>T4</span>
+                  <span>T5</span>
+                  <span>T6</span>
+                  <span>T7</span>
+                  <span>CN</span>
+                </div>
+
+                <div id="work-cal-grid" class="work-cal-grid font-tabular" onkeydown="onWorkCalGridKeydown(event)">
+                </div>
+
+                <div class="work-cal-footer">
+                  <div class="work-cal-legend" aria-hidden="true">
+                    <span class="work-cal-legend-item">
+                      <span class="work-cal-swatch is-order"></span>
+                      <span>Có đơn</span>
+                    </span>
+                    <span class="work-cal-legend-item">
+                      <span class="work-cal-swatch is-today"></span>
+                      <span>Hôm nay</span>
+                    </span>
+                  </div>
+                  <span id="work-cal-month-stats" class="work-cal-month-stats font-tabular">0 ngày có đơn</span>
+                </div>
+              </div>
+
+              <div class="work-cal-toggle-wrap">
+                <button type="button" id="btn-work-cal-toggle" class="btn-work-cal-toggle" aria-expanded="false"
+                  aria-controls="work-cal-body" aria-label="Mở lịch — mở rộng bảng lịch tháng"
+                  onclick="toggleWorkCalendar('work')">
+                  <svg class="work-cal-toggle-icon" viewBox="0 0 24 24" width="15" height="15" fill="none"
+                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="18" rx="3" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                  </svg>
+                  <span class="work-cal-toggle-label">Mở lịch</span>
+                  <svg class="work-cal-toggle-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+              </div>
+              <p id="work-cal-live" class="sr-only" role="status" aria-live="polite"></p>
             </div>
 
-            <div class="work-cal-toggle-wrap">
-              <button type="button" id="btn-work-cal-toggle" class="btn-work-cal-toggle" aria-expanded="false"
-                aria-controls="work-cal-body" aria-label="Mở lịch — mở rộng bảng lịch tháng"
-                onclick="toggleWorkCalendar('work')">
-                <span class="work-cal-toggle-label">Mở lịch</span>
-                <svg class="work-cal-toggle-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none"
-                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <path d="M6 9l6 6 6-6" />
+            <!-- Nút Copy QR Banking gọn 1 chạm bên cạnh nút Mở lịch -->
+            <div class="work-qr-action-card is-toolbar-compact" role="region" aria-label="Mã QR Banking nhận tiền">
+              <button type="button" id="btn-work-copy-qr" class="btn-work-qr-copy" onclick="copyBankQrImage()"
+                aria-label="Copy ảnh QR Banking BIDV 8867350944">
+                <span class="work-qr-btn-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.1"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7" rx="1.2" />
+                    <rect x="14" y="3" width="7" height="7" rx="1.2" />
+                    <rect x="3" y="14" width="7" height="7" rx="1.2" />
+                    <path d="M14 14h3v3h-3z" />
+                    <path d="M17 17h4v4" />
+                    <path d="M14 21h3" />
+                    <path d="M21 14v1" />
+                  </svg>
+                </span>
+                <span class="work-qr-cta-pill">
+                  <span class="qr-copy-icon-stack" aria-hidden="true">
+                    <svg class="qr-icon-copy" viewBox="0 0 24 24" width="13" height="13" fill="none"
+                      stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                    </svg>
+                    <svg class="qr-icon-check" viewBox="0 0 24 24" width="13" height="13" fill="none"
+                      stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span id="work-qr-copy-label" class="work-qr-cta-label">Copy QR</span>
+                </span>
+              </button>
+              <button type="button" id="btn-work-view-qr" class="btn-work-qr-preview" onclick="openBankQrModal()"
+                aria-label="Xem và chia sẻ mã QR Banking" aria-haspopup="dialog" aria-controls="modal-bank-qr"
+                title="Xem ảnh QR lớn / Chia sẻ">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M15 3h6v6" />
+                  <path d="M9 21H3v-6" />
+                  <path d="M21 3l-7 7" />
+                  <path d="M3 21l7-7" />
                 </svg>
               </button>
             </div>
-            <p id="work-cal-live" class="sr-only" role="status" aria-live="polite"></p>
+            <span id="work-qr-live" class="sr-only" role="status" aria-live="polite"></span>
           </div>
 
           <!-- Thẻ Tổng Kết Ngày & Tháng Tự Động (Bố cục chuẩn App Ngân Hàng - Cố định kết cấu) -->
           <div class="work-summary-hero-card" role="region" aria-label="Tổng kết doanh thu và chi tiêu">
-            <!-- Hàng 0: Chuyển nhanh chế độ xem Theo Ngày / Cả Tháng ngay trên thẻ chính -->
+            <!-- Hàng 0: Chuyển nhanh chế độ xem Theo Ngày / Cả Tháng + Tổng khách đang nợ -->
             <div class="work-hero-scope-bar">
               <div class="work-hero-scope-toggle" role="group" aria-label="Chế độ xem tổng kết">
                 <button type="button" id="btn-hero-scope-day" class="work-scope-btn active"
@@ -849,6 +963,11 @@
                 <button type="button" id="btn-hero-scope-month" class="work-scope-btn"
                   onclick="setWorkHeroScope('month')">Cả tháng</button>
               </div>
+              <button type="button" id="work-unpaid-banner" class="work-hero-debt-chip"
+                onclick="switchWorkSubTab('unpaid')" aria-label="Xem sổ nợ khách hàng">
+                <span class="work-hero-debt-chip-lbl">Tổng khách nợ</span>
+                <strong id="work-unpaid-total-all" class="work-hero-debt-chip-val font-tabular">0đ</strong>
+              </button>
             </div>
 
             <!-- Hàng 1: Nhãn tiêu đề (Trái) & Số lượng đơn (Phải) - Luôn cố định 1 dòng -->
@@ -890,54 +1009,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Nút Copy QR Banking nổi bật 1 chạm để gửi khách thanh toán -->
-          <div class="work-qr-action-card" role="region" aria-label="Mã QR Banking nhận tiền">
-            <button type="button" id="btn-work-copy-qr" class="btn-work-qr-copy" onclick="copyBankQrImage()">
-              <span class="work-qr-btn-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.1"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="3" width="7" height="7" rx="1.2" />
-                  <rect x="14" y="3" width="7" height="7" rx="1.2" />
-                  <rect x="3" y="14" width="7" height="7" rx="1.2" />
-                  <path d="M14 14h3v3h-3z" />
-                  <path d="M17 17h4v4" />
-                  <path d="M14 21h3" />
-                  <path d="M21 14v1" />
-                </svg>
-              </span>
-              <span class="work-qr-btn-body">
-                <strong class="work-qr-btn-title">Copy QR Banking</strong>
-                <span class="work-qr-btn-sub font-tabular">BIDV &bull; 8867350944</span>
-              </span>
-              <span class="work-qr-cta-pill">
-                <span class="qr-copy-icon-stack" aria-hidden="true">
-                  <svg class="qr-icon-copy" viewBox="0 0 24 24" width="14" height="14" fill="none"
-                    stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                  </svg>
-                  <svg class="qr-icon-check" viewBox="0 0 24 24" width="14" height="14" fill="none"
-                    stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 6L9 17l-5-5" />
-                  </svg>
-                </span>
-                <span id="work-qr-copy-label" class="work-qr-cta-label">Copy QR</span>
-              </span>
-            </button>
-            <button type="button" id="btn-work-view-qr" class="btn-work-qr-preview" onclick="openBankQrModal()"
-              aria-label="Xem và chia sẻ mã QR Banking" aria-haspopup="dialog" aria-controls="modal-bank-qr"
-              title="Xem ảnh QR lớn / Chia sẻ">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.1"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M15 3h6v6" />
-                <path d="M9 21H3v-6" />
-                <path d="M21 3l-7 7" />
-                <path d="M3 21l7-7" />
-              </svg>
-            </button>
-          </div>
-          <span id="work-qr-live" class="sr-only" role="status" aria-live="polite"></span>
 
           <!-- Thanh Chuyển Đổi 2 Phân Khu (Đơn việc & Sổ nợ) -->
           <div class="work-subtab-bar" style="grid-template-columns: repeat(2, minmax(0, 1fr));" role="tablist"
@@ -984,17 +1055,8 @@
                PHÂN KHU 2: SỔ NỢ KHÁCH HÀNG (GOM ĐƠN CTT THEO KHÁCH)
                =============================================================== -->
           <div id="work-subpane-unpaid" class="work-subpane">
-            <div id="work-unpaid-banner" class="work-unpaid-banner">
-              <div>
-                <span class="work-unpaid-banner-label">Tổng tiền khách đang nợ (CTT)</span>
-                <div id="work-unpaid-total-all" class="work-unpaid-banner-val font-tabular">0đ</div>
-              </div>
-              <span id="work-unpaid-count-all" class="work-job-count-pill badge-alert font-tabular">0 đơn nợ</span>
-            </div>
-
             <div id="debt-search-panel" class="work-search-card" role="search" aria-label="Tìm kiếm sổ nợ">
               <div class="work-search-field-group">
-                <label class="work-search-label" for="debt-search-input">Tìm tên khách hàng, dịch vụ hoặc ngày</label>
                 <div class="work-search-input-wrap">
                   <svg class="work-search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none"
                     stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
@@ -1003,8 +1065,9 @@
                     <line x1="21" y1="21" x2="16.65" y2="16.65" />
                   </svg>
                   <input type="search" id="debt-search-input" class="form-input work-mobile-input work-search-input"
-                    placeholder="Ví dụ: Tiến, FRP OPPO, 15/11" autocomplete="off" enterkeyhint="search"
-                    oninput="onDebtSearchInput(this.value)" onkeydown="onDebtSearchKeydown(event)">
+                    aria-label="Tìm theo tên khách hàng" placeholder="Tìm theo tên khách hàng..." autocomplete="off"
+                    enterkeyhint="search" oninput="onDebtSearchInput(this.value)"
+                    onkeydown="onDebtSearchKeydown(event)">
                   <button type="button" id="debt-search-clear" class="work-search-clear"
                     aria-label="Xoá từ khoá tìm kiếm sổ nợ" onclick="clearDebtSearch()" hidden>
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"
@@ -1013,49 +1076,6 @@
                       <line x1="6" y1="6" x2="18" y2="18" />
                     </svg>
                   </button>
-                </div>
-              </div>
-
-              <div class="work-time-filter-group">
-                <span id="debt-time-label" class="work-search-label">Thời gian</span>
-                <div id="debt-time-modes" class="work-time-mode-bar" role="group" aria-labelledby="debt-time-label">
-                  <button type="button" class="work-time-mode-pill active" data-mode="all" aria-pressed="true"
-                    onclick="setDebtTimeMode('all')">Tất cả</button>
-                  <button type="button" class="work-time-mode-pill" data-mode="day" aria-pressed="false"
-                    onclick="setDebtTimeMode('day')">Theo ngày</button>
-                  <button type="button" class="work-time-mode-pill" data-mode="month" aria-pressed="false"
-                    onclick="setDebtTimeMode('month')">Theo tháng</button>
-                  <button type="button" class="work-time-mode-pill" data-mode="range" aria-pressed="false"
-                    onclick="setDebtTimeMode('range')">Từ – Đến</button>
-                </div>
-
-                <div id="debt-time-day-row" class="work-time-detail-row" hidden>
-                  <div class="work-time-day-wrap">
-                    <label class="sr-only" for="debt-filter-date">Chọn ngày cần tìm trong sổ nợ</label>
-                    <input type="date" id="debt-filter-date" class="form-input work-mobile-input font-tabular"
-                      onchange="onDebtTimeDetailChange()">
-                    <button type="button" class="btn-work-today-chip work-time-today-btn"
-                      onclick="setDebtFilterToday()">Hôm nay</button>
-                  </div>
-                </div>
-
-                <div id="debt-time-month-row" class="work-time-detail-row" hidden>
-                  <label class="sr-only" for="debt-filter-month">Chọn tháng cần tìm trong sổ nợ</label>
-                  <select id="debt-filter-month" class="form-input work-mobile-input font-tabular"
-                    onchange="onDebtTimeDetailChange()"></select>
-                </div>
-
-                <div id="debt-time-range-row" class="work-time-detail-row work-time-range-grid" hidden>
-                  <div class="work-time-range-cell">
-                    <label class="work-time-sub-label" for="debt-filter-from">Từ ngày</label>
-                    <input type="date" id="debt-filter-from" class="form-input work-mobile-input font-tabular"
-                      onchange="onDebtTimeDetailChange()">
-                  </div>
-                  <div class="work-time-range-cell">
-                    <label class="work-time-sub-label" for="debt-filter-to">Đến ngày</label>
-                    <input type="date" id="debt-filter-to" class="form-input work-mobile-input font-tabular"
-                      onchange="onDebtTimeDetailChange()">
-                  </div>
                 </div>
               </div>
             </div>
@@ -1078,189 +1098,195 @@
         </section>
 
         <!-- =====================================================================
-             MÀN HÌNH: THU CHI CÁ NHÂN (THEO DÕI THEO NGÀY - THÁNG)
+             MÀN HÌNH 3: KHOẢN NỢ CỦA QUYỀN (TOÀN BỘ KHOẢN NỢ + TRẢ DẦN)
              ===================================================================== -->
-        <section id="tab-ledger" class="tab-pane" role="tabpanel" aria-label="Thu chi cá nhân">
-          <!-- Header: Quay lại + Tiêu đề -->
-          <div class="screen-nav-header">
-            <button type="button" class="btn-circle-action" aria-label="Quay lại trang Hôm nay"
-              onclick="switchTab('today')">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M15 18l-6-6 6-6" />
-              </svg>
-            </button>
-            <h1 class="screen-nav-title">Thu chi cá nhân</h1>
-            <div style="width: 40px;" aria-hidden="true"></div>
+        <section id="tab-ledger" class="tab-pane" role="tabpanel" aria-label="Khoản nợ của Quyền">
+          <div class="screen-nav-header" style="justify-content: center;">
+            <h1 class="screen-nav-title">Khoản nợ của Quyền</h1>
           </div>
 
-          <!-- Bảng Lịch Tháng (Mặc định thu nhỏ chỉ hiện thanh tháng, bấm nút ở dưới để mở rộng) -->
-          <div id="ledger-calendar-card" class="work-calendar-card is-collapsed" role="region"
-            aria-label="Lịch thu chi cá nhân và các ngày có phát sinh trong tháng">
-            <div class="work-cal-header">
-              <div class="work-cal-nav-group">
-                <button type="button" class="btn-work-cal-nav" onclick="stepWorkCalendarMonth(-1)"
-                  aria-label="Tháng trước">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M15 18l-6-6 6-6" />
-                  </svg>
-                </button>
-                <h2 id="ledger-cal-month-title" class="work-cal-month-title font-tabular">Tháng --/----</h2>
-                <button type="button" class="btn-work-cal-nav" onclick="stepWorkCalendarMonth(1)"
-                  aria-label="Tháng sau">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4"
-                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M9 18l6-6-6-6" />
-                  </svg>
-                </button>
-              </div>
-              <button type="button" id="btn-ledger-today" class="btn-work-today-chip" onclick="jumpWorkToday()">Hôm
-                nay</button>
-            </div>
-
-            <div id="ledger-cal-body" class="work-cal-body" hidden>
-              <div class="work-cal-weekdays" aria-hidden="true">
-                <span>T2</span>
-                <span>T3</span>
-                <span>T4</span>
-                <span>T5</span>
-                <span>T6</span>
-                <span>T7</span>
-                <span>CN</span>
-              </div>
-
-              <div id="ledger-cal-grid" class="work-cal-grid font-tabular" onkeydown="onWorkCalGridKeydown(event)">
-              </div>
-
-              <div class="work-cal-footer">
-                <div class="work-cal-legend" aria-hidden="true">
-                  <span class="work-cal-legend-item">
-                    <span class="work-cal-swatch is-order"></span>
-                    <span>Có thu chi</span>
-                  </span>
-                  <span class="work-cal-legend-item">
-                    <span class="work-cal-swatch is-today"></span>
-                    <span>Hôm nay</span>
-                  </span>
-                </div>
-                <span id="ledger-cal-month-stats" class="work-cal-month-stats font-tabular">0 ngày có thu chi</span>
-              </div>
-            </div>
-
-            <div class="work-cal-toggle-wrap">
-              <button type="button" id="btn-ledger-cal-toggle" class="btn-work-cal-toggle" aria-expanded="false"
-                aria-controls="ledger-cal-body" aria-label="Mở lịch — mở rộng bảng lịch tháng"
-                onclick="toggleWorkCalendar('ledger')">
-                <span class="work-cal-toggle-label">Mở lịch</span>
-                <svg class="work-cal-toggle-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none"
-                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                  aria-hidden="true">
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
-            </div>
-            <p id="ledger-cal-live" class="sr-only" role="status" aria-live="polite"></p>
-          </div>
-
-          <!-- Thẻ Tổng Kết Thu Chi Cá Nhân (Theo Ngày / Cả Tháng) -->
-          <div class="work-summary-hero-card" role="region" aria-label="Tổng kết thu chi cá nhân theo ngày và tháng">
-            <div class="work-hero-scope-bar">
-              <div class="work-hero-scope-toggle" role="group" aria-label="Chế độ xem thu chi">
-                <button type="button" id="btn-ledger-scope-day" class="work-scope-btn active"
-                  onclick="setLedgerHeroScope('day')">Theo ngày</button>
-                <button type="button" id="btn-ledger-scope-month" class="work-scope-btn"
-                  onclick="setLedgerHeroScope('month')">Cả tháng</button>
-              </div>
-            </div>
-
+          <!-- Thẻ Tổng Kết Khoản Nợ -->
+          <div class="work-summary-hero-card debt-personal-hero" role="region" aria-label="Tổng hợp khoản nợ của Quyền">
             <div class="work-bank-header-row">
-              <span class="work-summary-eyebrow" id="ledger-summary-date-label">Tổng chi tiêu hôm nay</span>
-              <span id="ledger-day-count-pill" class="work-job-count-pill font-tabular">0 khoản</span>
+              <span class="work-summary-eyebrow">Còn phải trả</span>
             </div>
 
             <div class="work-bank-balance-row">
-              <span id="ledger-hero-expense" class="work-huge-money font-tabular">0đ</span>
+              <span id="borrow-modal-total-rem" class="work-huge-money font-tabular is-remaining">0đ</span>
             </div>
 
-            <!-- Lưới 3 chỉ số thu chi (Chi tiêu, Mượn toàn thời gian, Trả nợ) -->
-            <div class="work-month-grid-3 font-tabular">
+            <div class="borrow-hero-progress-wrap">
+              <div class="borrow-hero-progress-head font-tabular">
+                <span>Tiến độ trả nợ</span>
+                <span id="borrow-hero-progress-pct">0%</span>
+              </div>
+              <div class="borrow-repay-progress-track" aria-hidden="true">
+                <div id="borrow-hero-progress-fill" class="borrow-repay-progress-fill" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <div class="work-month-grid-2 font-tabular">
               <div class="work-month-cell">
-                <span class="work-month-cell-lbl">Chi tiêu</span>
-                <strong id="ledger-stat-expense" class="work-month-cell-val">0đ</strong>
+                <span class="work-month-cell-lbl">Tổng đã trả</span>
+                <strong id="borrow-modal-total-paid" class="work-month-cell-val is-paid">0đ</strong>
               </div>
               <div class="work-month-cell">
-                <span class="work-month-cell-lbl">Mượn</span>
-                <strong id="ledger-stat-borrow" class="work-month-cell-val">0đ</strong>
-              </div>
-              <div class="work-month-cell">
-                <span class="work-month-cell-lbl">Trả nợ</span>
-                <strong id="ledger-stat-repay" class="work-month-cell-val">0đ</strong>
+                <span class="work-month-cell-lbl">Tổng nợ gốc</span>
+                <strong id="borrow-modal-total-orig" class="work-month-cell-val">0đ</strong>
               </div>
             </div>
           </div>
 
-          <!-- 1 Nút gom toàn bộ các khoản Mượn của Quyền (Luôn hiển thị bất kể ngày/tháng) -->
-          <div class="section-container" style="margin-top: 14px;">
-            <button type="button" id="btn-open-borrow-list" class="work-borrow-summary-btn"
-              onclick="openBorrowListModal()" aria-haspopup="dialog" aria-controls="modal-borrow-list">
-              <span class="work-borrow-btn-icon" aria-hidden="true">
-                <svg class="ui-inline-svg" viewBox="0 0 24 24" width="18" height="18" fill="none"
-                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="17" y1="7" x2="7" y2="17" />
-                  <polyline points="17 17 7 17 7 7" />
+          <!-- Tìm kiếm khoản nợ theo tên -->
+          <div id="borrow-search-panel" class="work-search-card work-search-card-compact" style="margin-top: 14px;"
+            role="search" aria-label="Tìm kiếm khoản nợ theo tên">
+            <div class="work-search-field-group">
+              <label class="sr-only" for="borrow-search-input">Tìm khoản nợ theo tên</label>
+              <div class="work-search-input-wrap">
+                <svg class="work-search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none"
+                  stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
                 </svg>
-              </span>
-              <span class="work-borrow-btn-body">
-                <span class="work-borrow-btn-title-row">
-                  <strong class="work-borrow-btn-title">Khoản Mượn của Quyền</strong>
-                  <span id="ledger-borrow-btn-badge" class="work-borrow-btn-badge font-tabular">0 khoản</span>
-                </span>
-              </span>
-              <span class="work-borrow-btn-right font-tabular">
-                <strong id="ledger-borrow-btn-total" class="work-borrow-btn-total">0đ</strong>
-                <span class="work-borrow-btn-chevron-wrap" aria-hidden="true">
-                  <svg class="work-borrow-btn-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none"
-                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                    aria-hidden="true">
-                    <path d="M9 18l6-6-6-6" />
+                <input type="search" id="borrow-search-input" class="form-input work-mobile-input work-search-input"
+                  placeholder="Tìm khoản nợ theo tên..." autocomplete="off" enterkeyhint="search"
+                  oninput="onBorrowSearchInput(this.value)" onkeydown="onBorrowSearchKeydown(event)">
+                <button type="button" id="borrow-search-clear" class="work-search-clear"
+                  aria-label="Xoá từ khoá tìm kiếm khoản nợ" onclick="clearBorrowSearch()" hidden>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
                   </svg>
-                </span>
-              </span>
-            </button>
+                </button>
+              </div>
+            </div>
           </div>
 
-          <!-- Danh sách phát sinh trong ngày đang xem -->
-          <div class="section-container" style="margin-top: 14px; margin-bottom: 28px;">
-            <div class="section-title-header">
-              <h2 id="ledger-day-list-title" class="section-heading">Phát sinh trong ngày</h2>
-              <span id="ledger-day-list-sub" class="work-list-sub font-tabular">0 khoản</span>
-            </div>
-            <div id="work-ledger-list" class="work-items-stack"></div>
+          <!-- Lọc trạng thái khoản nợ -->
+          <div id="borrow-list-filters" class="borrow-filter-bar font-tabular" role="tablist"
+            aria-label="Lọc trạng thái khoản nợ">
+            <button type="button" class="borrow-filter-pill active" data-filter="all" role="tab" aria-selected="true"
+              onclick="setBorrowModalFilter('all')">Tất cả (<span id="borrow-cnt-all">0</span>)</button>
+            <button type="button" class="borrow-filter-pill" data-filter="unpaid" role="tab" aria-selected="false"
+              onclick="setBorrowModalFilter('unpaid')">Chưa trả (<span id="borrow-cnt-unpaid">0</span>)</button>
+            <button type="button" class="borrow-filter-pill" data-filter="settled" role="tab" aria-selected="false"
+              onclick="setBorrowModalFilter('settled')">Đã trả xong (<span id="borrow-cnt-settled">0</span>)</button>
+          </div>
+
+          <div id="borrow-search-status" class="work-search-status font-tabular" hidden></div>
+          <p id="borrow-search-live" class="sr-only" role="status" aria-live="polite"></p>
+
+          <!-- Danh sách toàn bộ khoản nợ -->
+          <div class="section-container" style="margin-top: 10px; margin-bottom: 28px;">
+            <div id="borrow-modal-list" class="work-items-stack"></div>
           </div>
         </section>
 
         <!-- =====================================================================
-             MÀN HÌNH: QUỸ TIẾT KIỆM & MỤC TIÊU (ĐA QUỸ + LỊCH SỬ NẠP TỪNG QUỸ)
+             MÀN HÌNH: QUỸ TIẾT KIỆM & MỤC TIÊU (PRIVATE SOVEREIGN VAULT)
              ===================================================================== -->
         <section id="tab-funds" class="tab-pane" role="tabpanel" aria-label="Quỹ tiết kiệm">
-          <div class="screen-nav-header">
-            <button type="button" class="btn-circle-action" aria-label="Quay lại trang Hôm nay"
-              onclick="switchTab('today')">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M15 18l-6-6 6-6" />
+          <div class="funds-royal-header" style="--stagger-idx: 0;">
+            <span class="funds-royal-eyebrow">
+              <svg class="ui-inline-svg" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 18h18" />
+                <path d="M4 15 2 7l5 4 5-7 5 7 5-4-2 8Z" />
               </svg>
-            </button>
-            <h1 class="screen-nav-title">Quỹ tiết kiệm</h1>
-            <div style="width: 40px;" aria-hidden="true"></div>
+              <span>KHO BẠC CÁ NHÂN</span>
+            </span>
+            <h1 class="screen-nav-title funds-royal-title">Quỹ tiết kiệm</h1>
+            <div class="funds-royal-divider" aria-hidden="true">
+              <span class="royal-divider-line"></span>
+              <span class="royal-divider-diamond"></span>
+              <span class="royal-divider-line"></span>
+            </div>
+          </div>
+
+          <!-- Thẻ Kho Bạc Hoàng Kim Tổng Hợp -->
+          <div id="funds-royal-hero" class="funds-royal-vault-hero" style="--stagger-idx: 1;" role="region"
+            aria-label="Tổng quan kho bạc quỹ tiết kiệm">
+            <div class="royal-vault-bg" aria-hidden="true">
+              <svg class="royal-guilloche-svg" viewBox="0 0 260 260" fill="none">
+                <circle cx="130" cy="130" r="122" stroke="currentColor" stroke-width="0.65" stroke-dasharray="3 5" />
+                <circle cx="130" cy="130" r="102" stroke="currentColor" stroke-width="0.6" />
+                <circle cx="130" cy="130" r="82" stroke="currentColor" stroke-width="0.65" stroke-dasharray="1 4" />
+                <circle cx="130" cy="130" r="62" stroke="currentColor" stroke-width="0.55" />
+                <polygon points="130,18 156,104 242,130 156,156 130,242 104,156 18,130 104,104" stroke="currentColor"
+                  stroke-width="0.55" opacity="0.55" />
+                <polygon points="130,42 146,114 218,130 146,146 130,218 114,146 42,130 114,114" stroke="currentColor"
+                  stroke-width="0.5" opacity="0.4" />
+              </svg>
+              <span class="royal-vault-aura"></span>
+              <span class="royal-vault-sheen"></span>
+              <span class="royal-vault-glare"></span>
+              <span class="royal-gold-mote gm-1"></span>
+              <span class="royal-gold-mote gm-2"></span>
+              <span class="royal-gold-mote gm-3"></span>
+              <span class="royal-gold-mote gm-4"></span>
+              <span class="royal-gold-mote gm-5"></span>
+              <span class="royal-gold-mote gm-6"></span>
+              <span class="royal-corner c-tl"></span>
+              <span class="royal-corner c-tr"></span>
+              <span class="royal-corner c-bl"></span>
+              <span class="royal-corner c-br"></span>
+            </div>
+
+            <div class="royal-vault-content">
+              <div class="royal-hero-top">
+                <span class="royal-vault-crest">
+                  <svg class="ui-inline-svg" viewBox="0 0 24 24" width="13" height="13" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M3 18h18" />
+                    <path d="M4 15 2 7l5 4 5-7 5 7 5-4-2 8Z" />
+                  </svg>
+                  <span>TỔNG TÀI SẢN TÍCH LUỸ</span>
+                </span>
+                <span id="funds-hero-status-pill" class="royal-status-pill font-tabular">0% mục tiêu</span>
+              </div>
+
+              <div class="royal-hero-balance-block">
+                <strong id="funds-hero-total-saved" class="royal-hero-balance font-tabular">0đ</strong>
+                <div class="royal-hero-sub-row">
+                  <span id="funds-hero-target-sub" class="royal-hero-target font-tabular">/ Mục tiêu 0đ</span>
+                  <span id="funds-hero-month-pill" class="royal-month-pill font-tabular" hidden>+0đ tháng này</span>
+                </div>
+              </div>
+
+              <div class="royal-progress-wrap" aria-hidden="true">
+                <div class="royal-progress-track">
+                  <div id="funds-hero-progress-fill" class="royal-progress-fill" style="width: 0%;">
+                    <span class="royal-progress-shimmer"></span>
+                    <span class="royal-progress-diamond"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="royal-hero-stats-grid">
+                <div class="royal-stat-cell">
+                  <span class="royal-stat-label">Danh mục</span>
+                  <strong id="funds-hero-stat-count" class="royal-stat-val font-tabular">1 quỹ</strong>
+                </div>
+                <div class="royal-stat-cell">
+                  <span class="royal-stat-label">Lần nạp</span>
+                  <strong id="funds-hero-stat-deposits" class="royal-stat-val font-tabular">0 lần</strong>
+                </div>
+                <div class="royal-stat-cell">
+                  <span id="funds-hero-stat-rem-label" class="royal-stat-label">Còn thiếu</span>
+                  <strong id="funds-hero-stat-remaining" class="royal-stat-val font-tabular">0đ</strong>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Danh sách các quỹ -->
           <div class="section-container" style="margin-top: 2px; margin-bottom: 32px;">
-            <div class="section-title-header">
-              <h2 class="section-heading">Các quỹ của bạn</h2>
-              <span id="funds-count-sub" class="work-list-sub font-tabular">1 quỹ</span>
+            <div class="section-title-header funds-section-header">
+              <h2 class="section-heading funds-section-heading">Các quỹ của bạn</h2>
+              <span id="funds-count-sub" class="work-list-sub funds-count-pill font-tabular">1 quỹ</span>
             </div>
             <div id="funds-cards-list" class="funds-cards-stack"></div>
           </div>
@@ -1275,8 +1301,8 @@
           </svg>
         </button>
 
-        <button type="button" class="btn-fab-plus" data-fab-for="ledger" onclick="openAddWorkLedgerModal()"
-          aria-label="Mở popup ghi thu chi cá nhân" title="Ghi thu chi cá nhân">
+        <button type="button" class="btn-fab-plus" data-fab-for="ledger" onclick="openAddWorkLedgerModal('borrow')"
+          aria-label="Thêm khoản nợ mới" title="Thêm khoản nợ mới">
           <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.8"
             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <line x1="12" y1="5" x2="12" y2="19" />
@@ -1353,16 +1379,16 @@
           <span class="nav-label">Công việc</span>
         </button>
 
-        <!-- 3. Thu chi cá nhân -->
+        <!-- 3. Khoản nợ của Quyền -->
         <button type="button" class="nav-pill-btn" id="nav-btn-ledger" role="tab" aria-selected="false"
-          aria-controls="tab-ledger" tabindex="-1" aria-label="Thu chi" onclick="switchTab('ledger')">
+          aria-controls="tab-ledger" tabindex="-1" aria-label="Khoản nợ" onclick="switchTab('ledger')">
           <svg class="nav-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
             stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" />
             <path d="M3 5v14a2 2 0 0 0 2 2h16v-5" />
             <path d="M18 12a2 2 0 0 0 0 4h4v-4Z" />
           </svg>
-          <span class="nav-label">Thu chi</span>
+          <span class="nav-label">Khoản nợ</span>
         </button>
 
         <!-- 4. Quỹ tiết kiệm -->
@@ -1417,8 +1443,6 @@
         <div id="water-fill" class="log-progress-fill" style="width: 0%;"></div>
       </div>
 
-      <div class="field-hint" style="margin-bottom: 8px; font-size: 12px; color: var(--text-sub); font-weight: 600;">Bấm
-        chọn nhanh lượng nước vừa uống:</div>
       <div class="water-pill-grid">
         <button type="button" class="btn-water-chip font-tabular" onclick="addWater(200)">+200ml</button>
         <button type="button" class="btn-water-chip font-tabular" onclick="addWater(300)">+300ml</button>
@@ -1428,10 +1452,10 @@
 
       <form onsubmit="submitCustomWater(event)" class="water-custom-form">
         <div class="form-group">
-          <label class="form-label" for="custom-water-ml">Hoặc tự gõ số ml (1 - 2.000 ml)</label>
           <div class="water-custom-input-row">
             <input type="number" id="custom-water-ml" class="form-input work-mobile-input font-tabular"
-              placeholder="Ví dụ: 350" min="1" max="2000" inputmode="numeric" required>
+              aria-label="Nhập lượng nước uống (ml)" placeholder="Ví dụ: 350" min="1" max="2000" inputmode="numeric"
+              required>
             <button type="submit" class="btn-green-pill" style="white-space: nowrap;">Thêm nước</button>
           </div>
         </div>
@@ -1459,8 +1483,6 @@
           <span id="weight-val" class="weight-modal-num">97.0</span>
           <span class="weight-modal-unit">kg</span>
         </div>
-        <p id="weight-status-sub" class="weight-modal-sub">Cân vào sáng sớm sau khi vệ sinh cá nhân, trước khi ăn sáng.
-        </p>
       </div>
 
       <div class="weight-stepper-row" style="justify-content: center; margin-bottom: 14px;">
@@ -1472,25 +1494,13 @@
 
       <form onsubmit="saveWeight(event)">
         <div class="form-group">
-          <label class="form-label" for="weight-direct-input">Hoặc nhập trực tiếp số cân (kg)</label>
           <input type="number" step="0.1" min="40" max="200" inputmode="decimal" id="weight-direct-input"
-            class="form-input work-mobile-input font-tabular" placeholder="Ví dụ: 96.5"
-            oninput="syncWeightFromInput(this.value)" required>
+            class="form-input work-mobile-input font-tabular" aria-label="Nhập số cân nặng (kg)"
+            placeholder="Ví dụ: 96.5" oninput="syncWeightFromInput(this.value)" required>
         </div>
         <button type="submit" id="btn-save-weight" class="btn-green-pill" style="width: 100%; margin-top: 14px;">Lưu cân
           nặng</button>
       </form>
-
-      <div class="weight-modal-history-section"
-        style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-subtle);">
-        <div class="section-title-header" style="margin-bottom: 8px;">
-          <h4 class="form-label" style="margin: 0; font-size: 13px; color: var(--text-main);">Lịch sử cân nặng đã lưu
-          </h4>
-          <span id="weight-modal-history-count" class="footer-caption font-tabular">0 lần đo</span>
-        </div>
-        <div id="weight-modal-history-list" class="font-tabular"
-          style="max-height: 190px; overflow-y: auto; display: flex; flex-direction: column; gap: 6px;"></div>
-      </div>
     </div>
   </div>
 
@@ -1502,30 +1512,6 @@
         <button type="button" class="modal-close" aria-label="Đóng" onclick="closeModal('modal-med')">&times;</button>
       </div>
 
-      <div class="log-card-header" style="align-items: center; margin-bottom: 10px;">
-        <div class="log-card-subtitle" style="margin-top: 0; font-size: 13.5px;">
-          Đã uống <strong id="med-cur-count" class="font-tabular" style="color: var(--text-main);">0</strong> / <span
-            id="med-target-count" class="font-tabular">3 lần</span>
-          <span id="med-percent-badge" class="log-badge-pct font-tabular">0%</span>
-        </div>
-        <button type="button" id="btn-med-schedule-link" class="btn-med-schedule-pill font-tabular"
-          onclick="closeModal('modal-med'); jumpToMedScheduleSettings()"
-          title="Thay đổi giờ nhắc uống thuốc trong Cài đặt">
-          <svg class="ui-inline-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
-            stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="9" />
-            <path d="M12 7v5l3 2" />
-          </svg>
-          <span id="med-schedule-count-txt">3 lần/ngày</span>
-        </button>
-      </div>
-
-      <div class="log-progress-track">
-        <div id="med-progress-fill" class="log-progress-fill" style="width: 0%;"></div>
-      </div>
-
-      <div class="field-hint" style="margin-bottom: 8px; font-size: 12px; color: var(--text-sub); font-weight: 600;">Bấm
-        vào từng lần uống trong ngày để đánh dấu hoặc bỏ chọn:</div>
       <div id="med-dose-pills-grid" class="med-dose-grid modal-med-dose-list" role="group"
         aria-label="Các lần uống thuốc trong ngày"></div>
 
@@ -1542,28 +1528,11 @@
         <button type="button" class="modal-close" aria-label="Đóng" onclick="closeModal('modal-meals')">&times;</button>
       </div>
 
-      <div class="log-progress-track">
-        <div id="meal-progress-fill" class="log-progress-fill" style="width: 0%;"></div>
-      </div>
-
       <div id="today-meal-checklist-grid" class="med-dose-grid modal-med-dose-list" role="group"
         aria-label="Checklist Bữa ăn Healthy hôm nay"></div>
 
       <button type="button" class="btn-secondary-pill" style="width: 100%; margin-top: 16px;"
         onclick="closeModal('modal-meals')">Xong</button>
-    </div>
-  </div>
-
-  <!-- MODAL: Chi Tiết Điểm Tuân Thủ Hôm Nay -->
-  <div id="modal-score-breakdown" class="modal-overlay" role="dialog" aria-modal="true"
-    aria-labelledby="modal-score-title">
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <h3 id="modal-score-title" class="modal-title">Điểm tuân thủ hôm nay</h3>
-        <button type="button" class="modal-close" aria-label="Đóng"
-          onclick="closeModal('modal-score-breakdown')">&times;</button>
-      </div>
-      <div id="score-breakdown-content" class="modal-scroll-body">Đang tính toán...</div>
     </div>
   </div>
 
@@ -1775,124 +1744,25 @@
     </div>
   </div>
 
-  <!-- MODAL: Danh Sách Tất Cả Khoản Mượn Của Quyền (Không Phụ Thuộc Thời Gian) -->
-  <div id="modal-borrow-list" class="modal-overlay" role="dialog" aria-modal="true"
-    aria-labelledby="modal-borrow-list-title">
-    <div class="modal-dialog modal-dialog-tall">
-      <div class="modal-header">
-        <div>
-          <h3 id="modal-borrow-list-title" class="modal-title">Các khoản Mượn của Quyền</h3>
-          <p class="borrow-list-subtitle">Luôn hiển thị toàn bộ khoản mượn, không phụ thuộc ngày/tháng</p>
-        </div>
-        <button type="button" class="modal-close" aria-label="Đóng danh sách khoản mượn"
-          onclick="closeModal('modal-borrow-list')">&times;</button>
-      </div>
-
-      <div class="repay-summary-box">
-        <div class="repay-metrics-3 font-tabular">
-          <div class="repay-metric-cell">
-            <span class="repay-metric-lbl">Còn phải trả</span>
-            <strong id="borrow-modal-total-rem" class="repay-metric-val is-remaining">0đ</strong>
-          </div>
-          <div class="repay-metric-cell">
-            <span class="repay-metric-lbl">Tổng đã trả</span>
-            <strong id="borrow-modal-total-paid" class="repay-metric-val is-paid">0đ</strong>
-          </div>
-          <div class="repay-metric-cell">
-            <span class="repay-metric-lbl">Tổng mượn gốc</span>
-            <strong id="borrow-modal-total-orig" class="repay-metric-val">0đ</strong>
-          </div>
-        </div>
-        <button type="button" class="btn-borrow-add-inline" onclick="openAddWorkLedgerModal('borrow')">
-          <svg class="ui-inline-svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor"
-            stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <line x1="5" y1="12" x2="19" y2="12" />
-          </svg>
-          <span>Thêm khoản mượn mới</span>
-        </button>
-      </div>
-
-      <div id="borrow-search-panel" class="work-search-card work-search-card-compact" role="search"
-        aria-label="Tìm kiếm khoản mượn theo tên">
-        <div class="work-search-field-group">
-          <label class="work-search-label" for="borrow-search-input">Tìm khoản mượn theo tên</label>
-          <div class="work-search-input-wrap">
-            <svg class="work-search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
-              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-            <input type="search" id="borrow-search-input" class="form-input work-mobile-input work-search-input"
-              placeholder="Ví dụ: Anh Nam, Chị Hoa, Tiền nhà" autocomplete="off" enterkeyhint="search"
-              oninput="onBorrowSearchInput(this.value)" onkeydown="onBorrowSearchKeydown(event)">
-            <button type="button" id="borrow-search-clear" class="work-search-clear"
-              aria-label="Xoá từ khoá tìm kiếm khoản mượn" onclick="clearBorrowSearch()" hidden>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4"
-                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="18" y1="6" x2="6" y2="18" />
-                <line x1="6" y1="6" x2="18" y2="18" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div id="borrow-list-filters" class="borrow-filter-bar font-tabular" role="tablist"
-        aria-label="Lọc trạng thái khoản mượn">
-        <button type="button" class="borrow-filter-pill active" data-filter="all" role="tab" aria-selected="true"
-          onclick="setBorrowModalFilter('all')">Tất cả (<span id="borrow-cnt-all">0</span>)</button>
-        <button type="button" class="borrow-filter-pill" data-filter="unpaid" role="tab" aria-selected="false"
-          onclick="setBorrowModalFilter('unpaid')">Chưa trả (<span id="borrow-cnt-unpaid">0</span>)</button>
-        <button type="button" class="borrow-filter-pill" data-filter="settled" role="tab" aria-selected="false"
-          onclick="setBorrowModalFilter('settled')">Đã trả xong (<span id="borrow-cnt-settled">0</span>)</button>
-      </div>
-
-      <div id="borrow-search-status" class="work-search-status font-tabular" hidden></div>
-      <p id="borrow-search-live" class="sr-only" role="status" aria-live="polite"></p>
-
-      <div id="borrow-modal-list" class="work-items-stack"></div>
-    </div>
-  </div>
-
-  <!-- MODAL: Ghi Thu Chi Cá Nhân -->
+  <!-- MODAL: Thêm Khoản Nợ Mới -->
   <div id="modal-add-work-ledger" class="modal-overlay modal-top" role="dialog" aria-modal="true"
     aria-labelledby="modal-add-ledger-title">
     <div class="modal-dialog">
       <div class="modal-header">
-        <h3 id="modal-add-ledger-title" class="modal-title">+ Ghi thu chi cá nhân</h3>
-        <button type="button" class="modal-close" aria-label="Đóng hộp thoại ghi thu chi"
+        <h3 id="modal-add-ledger-title" class="modal-title">+ Thêm khoản nợ mới</h3>
+        <button type="button" class="modal-close" aria-label="Đóng hộp thoại thêm khoản nợ"
           onclick="closeModal('modal-add-work-ledger')">&times;</button>
       </div>
       <form id="work-ledger-form" class="work-quick-card" onsubmit="submitWorkLedger(event)">
         <p class="work-helper-text" style="margin-top: 0; margin-bottom: 10px;">
-          Ghi nhận nhanh các khoản chi tiêu cá nhân, thuê tool và mượn theo ngày - tháng.
+          Ghi lại khoản nợ mới để theo dõi số tiền gốc và lịch sử trả dần.
         </p>
+        <input type="hidden" id="work-ledger-category" value="borrow">
 
-        <!-- Chọn Phân Loại -->
+        <!-- Ngày ghi nhận -->
         <div class="form-group">
-          <label class="form-label" for="work-ledger-category">Phân loại khoản mục</label>
-          <div class="work-cat-grid" role="group" aria-label="Chọn phân loại thu chi">
-            <button type="button" class="work-cat-chip active" data-cat="expense"
-              onclick="setWorkLedgerCategory('expense')">
-              <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <path d="M16 10a4 4 0 0 1-8 0" />
-              </svg>
-              <span>Chi tiêu / Phát sinh</span>
-            </button>
-            <button type="button" class="work-cat-chip" data-cat="borrow" onclick="setWorkLedgerCategory('borrow')">
-              <svg class="ui-inline-svg" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <line x1="17" y1="7" x2="7" y2="17" />
-                <polyline points="17 17 7 17 7 7" />
-              </svg>
-              <span>Mượn</span>
-            </button>
-          </div>
-          <input type="hidden" id="work-ledger-category" value="expense">
+          <label class="form-label" for="work-ledger-date">Ngày ghi nhận</label>
+          <input type="date" id="work-ledger-date" class="form-input work-mobile-input font-tabular" required>
         </div>
 
         <!-- Số tiền -->
@@ -1902,25 +1772,28 @@
             <span id="work-ledger-amount-preview" class="work-price-preview font-tabular"></span>
           </div>
           <input type="number" id="work-ledger-amount" class="form-input work-mobile-input font-tabular"
-            placeholder="Ví dụ: 50" inputmode="numeric" min="1" step="any" required
+            placeholder="Ví dụ: 500" inputmode="numeric" min="1" step="any" required
             oninput="updateWorkLedgerAmountPreview(this.value)">
         </div>
 
         <!-- Nội dung chi tiết + Chip gợi ý nhanh -->
         <div class="form-group" style="margin-top: 10px;">
-          <label class="form-label" for="work-ledger-note">Nội dung chi tiết</label>
+          <label class="form-label" for="work-ledger-note">Tên khoản nợ / Người cho mượn</label>
           <input type="text" id="work-ledger-note" class="form-input work-mobile-input"
-            placeholder="Ví dụ: Mua cơm, Thuê tools, Đổ xăng..." maxlength="300" required>
-          <div class="work-chips-scroll" style="margin-top: 6px;" aria-label="Gợi ý nội dung chi tiêu">
-            <button type="button" class="work-suggest-chip" onclick="setWorkLedgerNote('Thuê tools')">Thuê tools</button>
-            <button type="button" class="work-suggest-chip" onclick="setWorkLedgerNote('Mua cơm')">Mua cơm</button>
-            <button type="button" class="work-suggest-chip" onclick="setWorkLedgerNote('Ăn sáng')">Ăn sáng</button>
-            <button type="button" class="work-suggest-chip" onclick="setWorkLedgerNote('Đổ xăng')">Đổ xăng</button>
-            <button type="button" class="work-suggest-chip" onclick="setWorkLedgerNote('Đi ăn')">Đi ăn</button>
+            placeholder="Ví dụ: Anh Nam, Chị Hoa, Tiền nhà, Thẻ tín dụng..." maxlength="300" required>
+          <div class="work-chips-scroll" style="margin-top: 6px;" aria-label="Gợi ý tên khoản nợ">
+            <button type="button" class="work-suggest-chip" onclick="setWorkLedgerNote('Tiền nhà')">Tiền nhà</button>
+            <button type="button" class="work-suggest-chip" onclick="setWorkLedgerNote('Tiền xe')">Tiền xe</button>
+            <button type="button" class="work-suggest-chip" onclick="setWorkLedgerNote('Thẻ tín dụng')">Thẻ tín
+              dụng</button>
+            <button type="button" class="work-suggest-chip" onclick="setWorkLedgerNote('Mượn bạn bè')">Mượn bạn
+              bè</button>
+            <button type="button" class="work-suggest-chip" onclick="setWorkLedgerNote('Mượn gia đình')">Mượn gia
+              đình</button>
           </div>
         </div>
 
-        <button type="submit" class="btn-green-pill" style="width: 100%; margin-top: 14px;">Lưu khoản mục</button>
+        <button type="submit" class="btn-green-pill" style="width: 100%; margin-top: 14px;">Lưu khoản nợ</button>
       </form>
     </div>
   </div>
@@ -2060,8 +1933,8 @@
             <span id="debt-pay-amount-preview" class="work-price-preview font-tabular"></span>
           </div>
           <input type="number" id="debt-pay-amount" name="debt_pay_amount"
-            class="form-input work-mobile-input font-tabular" placeholder="Ví dụ: 500" inputmode="numeric"
-            min="0.001" step="any" required oninput="updateDebtPayPreview()">
+            class="form-input work-mobile-input font-tabular" placeholder="Ví dụ: 500" inputmode="numeric" min="0.001"
+            step="any" required oninput="updateDebtPayPreview()">
           <p id="debt-pay-amount-after" class="repay-after-hint font-tabular" role="status"></p>
           <p id="debt-pay-amount-error" class="repay-error-text" role="alert" style="display: none;"></p>
           <div id="debt-pay-quick-chips" class="repay-chips-grid" aria-label="Chọn nhanh số tiền trả"></div>
@@ -2143,8 +2016,8 @@
             aria-label="Gợi ý ghi chú nạp quỹ">
             <button type="button" class="work-suggest-chip" onclick="setFundDepositNote('Nộp quỹ ngày')">Nộp quỹ
               ngày</button>
-            <button type="button" class="work-suggest-chip"
-              onclick="setFundDepositNote('Trích doanh thu')">Trích doanh thu</button>
+            <button type="button" class="work-suggest-chip" onclick="setFundDepositNote('Trích doanh thu')">Trích doanh
+              thu</button>
             <button type="button" class="work-suggest-chip" onclick="setFundDepositNote('Tiền thưởng')">Tiền
               thưởng</button>
             <button type="button" class="work-suggest-chip" onclick="setFundDepositNote('Tiết kiệm tuần')">Tiết
@@ -2310,8 +2183,7 @@
       </div>
 
       <div class="bank-qr-preview-frame">
-        <img id="bank-qr-modal-img" class="bank-qr-modal-img"
-          alt="Mã QR chuyển khoản BIDV 8867350944 Phùng Văn Quyền">
+        <img id="bank-qr-modal-img" class="bank-qr-modal-img" alt="Mã QR chuyển khoản BIDV 8867350944 Phùng Văn Quyền">
       </div>
 
       <div class="bank-qr-info-strip">
@@ -2342,7 +2214,7 @@
     </div>
   </div>
 
-  <script src="/app.js?v=104"></script>
+  <script src="/app.js?v=120"></script>
 </body>
 
 </html>
